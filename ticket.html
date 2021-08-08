@@ -1,0 +1,244 @@
+<html>
+<head>
+<title>Railway Ticket Reservation System</title>
+<style>
+body{
+background-image: url("https://besthqwallpapers.com/Uploads/17-9-2019/104782/thumb2-cargo-train-4k-railway-cargo-transportation-oil-transportation.jpg");
+background-repeat: no-repeat;
+background-size:100%;
+}
+h1{
+background-color:black;
+color: white;
+}
+h2{
+color: white;
+}
+label{
+color:white;
+}
+button{
+background-color:black;
+color: white;
+width:5%;
+margin-bottom:20px;
+}
+table{
+ color:white;
+ font-size: 25px;
+}
+.topnav a{
+  float: left;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active{
+  background-color: #04AA6D;
+  color: white;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+</style>
+<script type="text/javascript">
+function validate(){
+var reser = document.getElementById("reser");
+var froms = document.getElementById("froms");
+if(reser.value.trim()=="" ||froms.value.trim()=="")
+{
+window.alert("No Blank Values Allowed !");
+return false;
+}
+else
+{
+window.alert("Your Booking Details Saved Successfully!");
+}
+}
+</script>
+</head>
+<body >
+<center><h1><b> RAILWAY TICKET RESERVATION SYSTEM</b></center>
+<marquee behaviour="alternate"bgcolor="Grey"height="25">
+<font size="5"><i><b>Welcome to our Train Ticket Booking System, This is the Portal of Indian Railways COVID-19 Appropriate Behaviour - Wear mask, Physical Distancing, Maintain Hand Hygiene, Regular Sanitization, Track your Temperature Thank You Visit Again ! </i></b></font>
+</marquee>
+<div class="topnav">
+  <a class="active" href="home.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="login.html">Login</a>
+  <a href="register.html">Register</a>               
+  <a href="ticket.html">Book Ticket</a>
+<a href="home.html">Logout</a>
+</div>
+<font size="5">
+<h2> BOOK TRAIN TICKET</h2>
+<form onsubmit="return validate()" action=ticket.jsp method="post">
+
+ 
+<table align="left" >
+<tr>
+<td for="reser"><b>Reservation Quota:</b></td>
+ 
+<td>
+<select name="reser" id="reser">
+<option value="-">select</option>
+<option value="General">General</option>
+<option value="Taktal">Taktal</option>
+<option value="Premium">Premiun_Taktal</option>
+
+ 
+
+</select></td></tr>
+<tr>
+<td for="froms"> <b>From:</b> </td>
+<td><select name="froms" id="froms">
+<option value="Select">Select</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Chennai">Chennai</option>
+<option value="Hyderabad">Hyderabad</option>
+<option value="Coimbatore">Coimbatore</option>
+<option value="Delhi">Delhi</option>
+<option value="Bangalore">Bangalore</option>
+<option value="kanyakumari">Kanyakumari</option>
+<option value="Mysore">Mysore</option>
+<option value="Madurai">Madurai</option>
+<option value="Salem">Salem</option>
+<option value="Kerala">Kerala</option>
+<option value="Trichy">Trichy</option>
+<option value="Thirupathi">Thirupathi</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td for="tooo"> <b>To:</b> </td>
+<td><select name="tooo" id="tooid">
+<option value="Select">Select</option>
+<option value="Mumbai">Mumbai</option>
+<option value="Chennai">Chennai</option>
+<option value="Hyderabad">Hyderabad</option>
+<option value="Coimbatore">Coimbatore</option>
+<option value="Delhi">Delhi</option>
+<option value="Bangalore">Bangalore</option>
+<option value="kanyakumari">Kanyakumari</option>
+<option value="Mysore">Mysore</option>
+<option value="Madurai">Madurai</option>
+<option value="Salem">Salem</option>
+<option value="Kerala">Kerala</option>
+<option value="Trichy">Trichy</option>
+<option value="Thirupathi">Thirupathi</option>
+</select>
+</td>
+</tr>
+
+ 
+<tr>
+<td for="trains"><b>Train Number/Train Name:</b></td>
+<td><select name="trains">
+<option value="Select">Select</option>
+<option value="Mumbai Express, 17032">Mumbai Express, 17032</option>
+<option value="Chennai Express, 12163">Chennai Express, 12163</option>
+<option value="Hyderabad Express, 12603">Hyderabad Express, 12603</option>
+<option value="Covai Express, 12679">Covai Express, 12679</option>
+<option value="Delhi Express, 12622">Delhi Express, 12622</option>
+<option value="Banglore Express, 16525">Banglore Express, 16525</option>
+<option value="Kanyakumari Express, 12633">Kanyakumari Express, 12633</option>
+<option value="Mysore Express, 16231">Mysore Express, 16231</option>
+<option value="Madurai Express, 22623">Madurai Express, 22623</option>
+<option value="Salem Express, 22153">Salem Express, 22153</option>
+<option value="Kerala Express, 12625">Kerala Express, 12625</option>
+<option value="Trichy Express, 16853">Trichy Express, 16853</option>
+<option value="Andhra Express, 12723">Andhra Express, 12723</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td for="adults"> <b>No of Adults:</b></td>
+<td><select name="adults" id="adultid">
+<option value="Select">Select</option>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td for="child"> <b>No of Child:</b></td>
+<td><select name="child" id="childid">
+<option value="Select">Select</option>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td for="dates"><b>Depature Date:</b></td>
+<td><input type="date" name="dates" maxlength="30"/>
+</td></tr>
+
+<tr>
+<td for="classes"> <b>Class/Price:</b></td>
+<td><select name="classes" id="classid">
+<option value="Select">Select</option>
+  <option value="General">General (Rs.200)</option>
+  <option value="First Class">First Class (Rs.500)</option>
+  <option value="Second Class">Second Class (Rs.350)</option>
+</select>
+</td>
+</tr>
+
+</table>
+<input type="submit" value="Submit" style="margin-top:270px; margin-left:-143px; background-color:black; color:white;">
+</form>
+</body>
+</html>
